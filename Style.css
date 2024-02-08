@@ -1,97 +1,104 @@
-html{
-    box-sizing: border-box;
+body {
+  background: rgb(24, 23, 23);
+  margin: 0;
+  padding: 0;
+  height: 200vmin;
 }
-body{
-    margin:0;
-    min-height: 100vh;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    background: whitesmoke;
-    background: linear-gradient(to right,#2c5364,#203a43,black);
-}
-.calculator{
-    background: rgb(9, 163, 94);
-    width: 400px;
-    border-radius: 12px;
-    box-shadow: 0 5px 30px-5px rgba(0,0,0,0.6);
 
+.object {
+  border-radius: 50%;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateY( 8vmin );
+}
 
+.p-orbit, #m-orbit{
+  border: 0.1vmin solid lightgrey;
+  opacity: 0.5;
+  background: transparent;
 }
-/*display*/
-.calculator-display{
-    background: black;
-    color: white;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    border-radius: 10px 10px 0 0;
-    max-width: 100%;
-}
-.calculator-display h1{
-    margin:0;
-    padding: 39px;
-    font-size: 98px;
-    font-family: "Lucida Sans", sans-serif;
-    font-weight: 200;
-    overflow-x: auto;
 
+#belt {
+  height: 97min;
+  width: 97vmin;
+  animation: spin 2s infinite linear;
+  margin-top: vmin;
 }
-/*custom scrollbar*/
-::-webkit-scrollbar{
-    width: 5px;
+
+@keyframes spin{
+  0%{ transform: rotate(0deg) }
+  100%{ transform: rotate(360deg) }
 }
-::-webkit-scrollbar-track{
-    background: #f1f1f1;
+
+#m-orbit {
+  height: 2vmin;
+  width: 2vmin;
 }
-::-webkit-scrollbar-thumb{
-    background: #888;
+
+.planet, #moon {
+  z-index: 100;
 }
-::-webkit-scrollbar-thumb:hover{
-    background: #555;
+
+#sun {
+  height: 20vmin;
+  width: 20vmin;
+  background-color: yellow;
 }
-/*buttons*/
-.calculator-buttons{
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(4,1fr);
-    padding: 10px;
+
+#moon {
+  height: 7vmin;
+  width: 7vmin;
+  background-color: white;
 }
-button{
-    min-height: 50px;
-    font-size: 20px;
-    font-weight: 100;
-    border: none;
-    background: rgb(200, 200,200);
-    border-radius: 5px;
-    cursor: pointer;
+
+#mercury {
+  height: 10vmin;
+  width: 10vmin;
+  background-color: blue;
 }
-button:hover{
-    filter:brightness(110%);
+
+#venus {
+  height: 10vmin;
+  width: 10vmin;
+  background-color: blueviolet;
 }
-button:active{
-transform: translateY(1px);
+
+#earth {
+  height: 10vmin;
+  width: 9vmin;
+  background-color: antiquewhite;
 }
-button:focus{
-    outline: none;
+
+#mars {
+  height: 10vmin;
+  width: 10vmin;
+  background-color: aquamarine;
 }
-.operator{
-    background: orange;
-    color:white;
-    font-size: 25px;
+
+#jupiter {
+  height: 12vmin;
+  width: 12vmin;
+  background-color: aqua;
 }
-.clear:hover{
-    filter: brightness(90%);
+
+#saturn {
+  height: 10vmin;
+  width: 10vmin;
+  background-color: beige;
 }
-.equal-sign{
-    grid-column: -2;
-    grid-row: 2/span 4;
-    background: rgba(13, 206, 87);
+
+#uranus {
+  height: 10vmin;
+  width: 10vmin;
+  background-color: brown;
 }
-/*media qurey:large smartphone(vertical)*/
-@media screen and(max-width-600px){
-    .calculator{
-        width: 95%;
-    }
+
+#neptune {
+  height: 10vmin;
+  width: 10vmin;
+  background-color: aquamarine;
 }
